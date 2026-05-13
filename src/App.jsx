@@ -150,7 +150,7 @@ const Portfolio = () => {
       tags: ['Next.js', 'Gemini API', 'Tailwind'],
       icon: <Brain className="w-6 h-6 text-purple-400" />,
       description: 'Hackathon project building a comprehensive campus platform. Integrated generative AI for intelligent opportunity discovery and automated mock interview workflows.',
-      link: 'https://github.com/Faizan-Khan0007/aii-mock-interview'
+      link: 'https://aii-mock-tnppro.vercel.app/'
     },
     {
       id: 'amazin-app',
