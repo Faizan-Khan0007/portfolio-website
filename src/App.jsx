@@ -581,7 +581,7 @@ const Portfolio = () => {
           </div>
           
           <div className="border-t border-purple-500/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-500">
-            <p>© {new Date().getFullYear()} Faizan Khan. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Faizan Khan · Building ideas into reality.</p>
             <div className="flex gap-8">
               <a href="https://github.com/Faizan-Khan0007" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors font-medium">GitHub</a>
               <a href="https://www.linkedin.com/in/faizanxp/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors font-medium">LinkedIn</a>
