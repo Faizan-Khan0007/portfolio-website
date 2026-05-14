@@ -228,12 +228,12 @@ const Portfolio = () => {
             : 'bg-transparent border-transparent py-6'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-lg font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400 hover:opacity-80 transition-opacity relative z-50 flex items-center gap-2"
+            className="text-lg md:text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400 hover:opacity-80 transition-opacity relative z-50 flex items-center gap-2"
           >
-            <Zap className="w-5 h-5 text-purple-500" />
+            <Zap className="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
             Faizan Khan
           </button>
 
@@ -243,7 +243,7 @@ const Portfolio = () => {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.id)}
-                className={`text-sm font-medium transition-all duration-300 ${
+                className={`text-sm md:text-base font-medium transition-all duration-300 ${
                   activeSection === link.id 
                     ? 'text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.4)]' 
                     : 'text-slate-400 hover:text-purple-300'
@@ -256,10 +256,10 @@ const Portfolio = () => {
             {/* Cmd+K Trigger */}
             <button 
               onClick={() => setIsCmdKOpen(true)}
-              className="flex items-center space-x-2 text-xs font-medium text-purple-300/70 bg-purple-500/5 border border-purple-500/20 px-3 py-1.5 rounded-md hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-purple-200 transition-all duration-300"
+              className="flex items-center space-x-2 text-xs md:text-sm font-medium text-purple-300/70 bg-purple-500/5 border border-purple-500/20 px-3 py-1.5 rounded-md hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-purple-200 transition-all duration-300"
             >
               <span>Search...</span>
-              <kbd className="hidden sm:inline-block font-sans bg-purple-500/20 px-1.5 py-0.5 rounded text-[10px] text-purple-300 border border-purple-500/20">
+              <kbd className="hidden sm:inline-block font-sans bg-purple-500/20 px-1.5 py-0.5 rounded text-[10px] md:text-xs text-purple-300 border border-purple-500/20">
                 <span className="mr-0.5">⌘</span>K
               </kbd>
             </button>
@@ -268,7 +268,7 @@ const Portfolio = () => {
               href={resumeLink}
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-sm font-medium bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-5 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+              className="flex items-center space-x-2 text-sm md:text-base font-medium bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-5 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
               <Download className="w-4 h-4" />
               <span>Resume</span>
@@ -318,7 +318,7 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 md:px-12 pt-24 pb-24 space-y-24 md:space-y-32">
+      <main className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-24 space-y-24 md:space-y-32">
         
         {/* Hero Section */}
         <section className="pt-6 md:pt-10 pb-8 flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-10 min-h-[80vh] md:min-h-[70vh] relative reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
@@ -326,29 +326,29 @@ const Portfolio = () => {
           <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
           {/* Left Text Content */}
-          <div className="space-y-6 max-w-2xl relative z-10 flex-1 w-full text-center md:text-left">
+          <div className="space-y-6 max-w-3xl relative z-10 flex-1 w-full text-center md:text-left">
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-100 leading-[1.15]">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-100 leading-[1.15]">
               Faizan Khan <span className="text-purple-500/50 hidden md:inline">—</span> <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-400 animate-gradient-x mt-2 inline-block pb-2">
                 Mobile & Full-Stack Engineer
               </span>
             </h1>
             
-            <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0">
               Specializing in Flutter, cloud-native backends, and building clean, user-centric software architectures.
             </p>
             
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="bg-slate-100 text-[#07050f] px-6 py-3 rounded-xl font-semibold hover:bg-white hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all duration-300 flex items-center gap-2"
+                className="bg-slate-100 text-[#07050f] px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all duration-300 flex items-center gap-2 text-base md:text-lg"
               >
-                View Projects <ChevronRight className="w-4 h-4" />
+                View Projects <ChevronRight className="w-5 h-5" />
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="border border-purple-500/30 bg-purple-500/5 text-purple-100 px-6 py-3 rounded-xl font-medium hover:bg-purple-500/20 hover:border-purple-400 transition-all duration-300 backdrop-blur-sm"
+                className="border border-purple-500/30 bg-purple-500/5 text-purple-100 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium hover:bg-purple-500/20 hover:border-purple-400 transition-all duration-300 backdrop-blur-sm text-base md:text-lg"
               >
                 Contact Me
               </button>
@@ -368,14 +368,14 @@ const Portfolio = () => {
                   className="hover:text-purple-400 hover:-translate-y-1 transition-all duration-300 p-3 hover:bg-purple-500/10 rounded-xl border border-transparent hover:border-purple-500/20" 
                   aria-label={social.label}
                 >
-                  <social.icon className="w-6 h-6" />
+                  <social.icon className="w-7 h-7 md:w-8 md:h-8" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Premium Image Container */}
-          <div className="relative z-10 w-full max-w-[260px] sm:max-w-[300px] md:max-w-[380px] flex-1 group">
+          {/* Premium Image Container - Widened */}
+          <div className="relative z-10 w-full max-w-[300px] sm:max-w-[360px] md:max-w-[460px] lg:max-w-[500px] flex-1 group">
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/40 to-fuchsia-600/40 border border-purple-500/30 rounded-3xl rotate-3 group-hover:rotate-6 transition-all duration-500 ease-out blur-[2px] group-hover:blur-[8px]"></div>
             <div className="absolute inset-0 bg-[#0c0a1a]/80 border border-purple-500/40 rounded-3xl -rotate-2 group-hover:-rotate-4 transition-all duration-500 ease-out scale-[0.98]"></div>
             
@@ -396,10 +396,10 @@ const Portfolio = () => {
         <section id="projects" className="scroll-mt-32 space-y-10 reveal opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
-                <Sparkles className="w-6 h-6 text-fuchsia-400" /> Featured Projects
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
+                <Sparkles className="w-7 h-7 md:w-8 md:h-8 text-fuchsia-400" /> Featured Projects
               </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
             </div>
             
             {/* Dynamic Tab Filters */}
@@ -409,7 +409,7 @@ const Portfolio = () => {
                   <button
                     key={tab}
                     onClick={() => setProjectFilter(tab)}
-                    className={`whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    className={`whitespace-nowrap px-4 py-2 md:px-5 md:py-2.5 rounded-lg text-sm md:text-base font-medium transition-all duration-300 ${
                       projectFilter === tab 
                         ? 'bg-purple-500/20 text-purple-200 shadow-[0_0_15px_rgba(168,85,247,0.2)] border border-purple-500/30' 
                         : 'text-slate-400 hover:text-purple-200 hover:bg-purple-500/10 border border-transparent'
@@ -430,28 +430,28 @@ const Portfolio = () => {
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
-                  <div className="space-y-5 max-w-3xl">
+                  <div className="space-y-5 max-w-4xl">
                     <div className="flex items-center justify-between md:justify-start gap-4">
                       <div className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
                         {project.icon}
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-slate-100 group-hover:text-purple-300 transition-colors">
+                      <h3 className="text-2xl md:text-3xl font-bold text-slate-100 group-hover:text-purple-300 transition-colors">
                         {project.title}
                       </h3>
                       {project.link && (
                         <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Link to ${project.title}`}>
-                          <ExternalLink className="w-5 h-5 text-slate-500 group-hover:text-fuchsia-400 transition-colors cursor-pointer" />
+                          <ExternalLink className="w-6 h-6 text-slate-500 group-hover:text-fuchsia-400 transition-colors cursor-pointer" />
                         </a>
                       )}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map(tag => (
-                        <span key={tag} className="bg-purple-500/10 border border-purple-500/20 text-purple-200 px-3 py-1 rounded-md text-xs font-semibold tracking-wide shadow-sm">
+                        <span key={tag} className="bg-purple-500/10 border border-purple-500/20 text-purple-200 px-3 py-1 rounded-md text-sm font-semibold tracking-wide shadow-sm">
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <p className="text-slate-400 leading-relaxed text-base pt-2">
+                    <p className="text-slate-400 leading-relaxed text-base md:text-lg pt-2">
                       {project.description}
                     </p>
                   </div>
@@ -464,10 +464,10 @@ const Portfolio = () => {
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-32 space-y-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
-              <Briefcase className="w-6 h-6 text-purple-400" /> Experience
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
+              <Briefcase className="w-7 h-7 md:w-8 md:h-8 text-purple-400" /> Experience
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
           </div>
 
           <div className="relative pl-6 md:pl-8 border-l border-purple-500/30 space-y-12 ml-4">
@@ -477,10 +477,10 @@ const Portfolio = () => {
               
               <div className="space-y-4 bg-[#0e0a1a]/50 p-6 md:p-8 rounded-2xl border border-purple-500/10 group-hover:border-purple-500/30 transition-colors duration-300 backdrop-blur-sm">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-                  <h3 className="text-lg md:text-xl font-bold text-slate-100">Flutter Developer Intern <span className="text-purple-400">@ Thyright Innovations</span></h3>
-                  <span className="text-sm font-semibold text-fuchsia-300 bg-fuchsia-500/10 px-4 py-1.5 rounded-full border border-fuchsia-500/20 w-fit shadow-inner">Aug 2025 – Nov 2025</span>
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-100">Flutter Developer Intern <span className="text-purple-400">@ Thyright Innovations</span></h3>
+                  <span className="text-sm md:text-base font-semibold text-fuchsia-300 bg-fuchsia-500/10 px-4 py-1.5 rounded-full border border-fuchsia-500/20 w-fit shadow-inner">Aug 2025 – Nov 2025</span>
                 </div>
-                <p className="text-sm md:text-base text-slate-400 leading-relaxed max-w-4xl">
+                <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-4xl">
                   Contributed to Thyverse, a production healthcare app. Optimized key features to improve workflow efficiency by <strong className="text-purple-300 font-semibold">15%</strong> and implemented secure REST API integrations connecting the Flutter frontend with AWS backend services within an agile team.
                 </p>
               </div>
@@ -491,23 +491,23 @@ const Portfolio = () => {
         {/* The Engine Room (Skills) */}
         <section id="engine-room" className="scroll-mt-32 space-y-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
-              <Terminal className="w-6 h-6 text-indigo-400" /> The Engine Room
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-100 tracking-tight flex items-center gap-3">
+              <Terminal className="w-7 h-7 md:w-8 md:h-8 text-indigo-400" /> The Engine Room
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-500 to-fuchsia-500 mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-[#0e0a1a]/60 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 space-y-10 hover:border-purple-500/50 hover:shadow-[0_10px_40px_rgba(168,85,247,0.1)] transition-all duration-500 relative overflow-hidden">
               <div className="absolute -right-10 -top-10 w-40 h-40 bg-purple-500/10 rounded-full blur-[40px] pointer-events-none"></div>
               
               <div className="relative z-10">
-                <h3 className="text-sm font-bold text-purple-400 uppercase tracking-wider mb-5 flex items-center gap-2">
-                  <Code2 className="w-4 h-4" /> Languages
+                <h3 className="text-base md:text-lg font-bold text-purple-400 uppercase tracking-wider mb-5 flex items-center gap-2">
+                  <Code2 className="w-5 h-5" /> Languages
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {['C++', 'Dart', 'JavaScript', 'SQL'].map(skill => (
-                    <span key={skill} className="bg-[#07050f] border border-purple-500/30 text-slate-200 px-5 py-2 rounded-xl text-sm font-medium hover:bg-purple-500/20 hover:border-purple-400 transition-colors cursor-default shadow-sm">
+                    <span key={skill} className="bg-[#07050f] border border-purple-500/30 text-slate-200 px-5 py-2 rounded-xl text-base font-medium hover:bg-purple-500/20 hover:border-purple-400 transition-colors cursor-default shadow-sm">
                       {skill}
                     </span>
                   ))}
@@ -515,12 +515,12 @@ const Portfolio = () => {
               </div>
               
               <div className="relative z-10">
-                <h3 className="text-sm font-bold text-fuchsia-400 uppercase tracking-wider mb-5 flex items-center gap-2">
-                  <Cloud className="w-4 h-4" /> Frameworks & Cloud
+                <h3 className="text-base md:text-lg font-bold text-fuchsia-400 uppercase tracking-wider mb-5 flex items-center gap-2">
+                  <Cloud className="w-5 h-5" /> Frameworks & Cloud
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {['Flutter', 'Node.js', 'Express.js', 'AWS', 'MongoDB', 'Firebase'].map(skill => (
-                    <span key={skill} className="bg-[#07050f] border border-fuchsia-500/30 text-slate-200 px-5 py-2 rounded-xl text-sm font-medium hover:bg-fuchsia-500/20 hover:border-fuchsia-400 transition-colors cursor-default shadow-sm">
+                    <span key={skill} className="bg-[#07050f] border border-fuchsia-500/30 text-slate-200 px-5 py-2 rounded-xl text-base font-medium hover:bg-fuchsia-500/20 hover:border-fuchsia-400 transition-colors cursor-default shadow-sm">
                       {skill}
                     </span>
                   ))}
@@ -534,16 +534,16 @@ const Portfolio = () => {
               </div>
               
               <div className="relative z-10 space-y-6">
-                <h3 className="text-xl md:text-2xl font-bold text-slate-100 flex items-center gap-3">
-                  <Brain className="w-7 h-7 text-fuchsia-400" /> Algorithmic Strength
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-100 flex items-center gap-3">
+                  <Brain className="w-8 h-8 text-fuchsia-400" /> Algorithmic Strength
                 </h3>
-                <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+                <p className="text-base md:text-lg text-slate-300 leading-relaxed">
                   Solved <span className="text-white font-bold bg-purple-500/20 px-2 py-0.5 rounded border border-purple-500/30">500+ DSA problems</span> across platforms, including <span className="text-white font-bold bg-fuchsia-500/20 px-2 py-0.5 rounded border border-fuchsia-500/30">250+ LeetCode Medium/Hard</span>. 
                 </p>
                 <div className="pt-4">
-                  <div className="inline-flex items-center gap-3 bg-[#07050f]/80 px-4 py-3 rounded-xl border border-indigo-500/30">
-                    <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                    <span className="text-sm md:text-base text-slate-200 font-medium">CodeChef Peak Global Rank: <strong className="text-indigo-400 text-lg ml-1">528</strong></span>
+                  <div className="inline-flex items-center gap-3 bg-[#07050f]/80 px-4 py-3 md:px-5 md:py-4 rounded-xl border border-indigo-500/30">
+                    <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+                    <span className="text-base md:text-lg text-slate-200 font-medium">CodeChef Peak Global Rank: <strong className="text-indigo-400 text-xl ml-1">528</strong></span>
                   </div>
                 </div>
               </div>
@@ -557,30 +557,30 @@ const Portfolio = () => {
       <footer id="contact" className="border-t border-purple-500/20 bg-[#07050f] pt-24 pb-12 mt-20 relative overflow-hidden reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-purple-600/10 rounded-[100%] blur-[100px] pointer-events-none"></div>
         
-        <div className="max-w-3xl mx-auto px-6 text-center space-y-10 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-400 tracking-tight pb-2">Let's Build Together</h2>
-          <p className="text-purple-200/70 text-base md:text-lg font-medium max-w-xl mx-auto">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-10 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-400 tracking-tight pb-2">Let's Build Together</h2>
+          <p className="text-purple-200/70 text-lg md:text-xl font-medium max-w-xl mx-auto">
             Currently available for 6-month and 1-year internship roles starting June or January.
           </p>
           
-          <div className="pt-6 pb-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-6 pb-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
             <a 
               href={`mailto:${emailAddress}`}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 text-base md:text-lg w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 text-lg md:text-xl w-full sm:w-auto justify-center"
             >
-              <Mail className="w-5 h-5 md:w-6 md:h-6" />
+              <Mail className="w-6 h-6" />
               Send Email
             </a>
             <a 
               href={`tel:+91${phoneNumber}`}
-              className="inline-flex items-center gap-3 bg-purple-500/10 border border-purple-500/30 text-purple-100 px-8 py-4 rounded-xl font-bold hover:bg-purple-500/20 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 text-base md:text-lg w-full sm:w-auto justify-center backdrop-blur-sm"
+              className="inline-flex items-center gap-3 bg-purple-500/10 border border-purple-500/30 text-purple-100 px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold hover:bg-purple-500/20 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 text-lg md:text-xl w-full sm:w-auto justify-center backdrop-blur-sm"
             >
-              <Phone className="w-5 h-5 md:w-6 md:h-6" />
+              <Phone className="w-6 h-6" />
               +91 {phoneNumber}
             </a>
           </div>
           
-          <div className="border-t border-purple-500/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-500">
+          <div className="border-t border-purple-500/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-base text-slate-500">
             <p>© {new Date().getFullYear()} Faizan Khan · Building ideas into reality.</p>
             <div className="flex gap-8">
               <a href="https://github.com/Faizan-Khan0007" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors font-medium">GitHub</a>
