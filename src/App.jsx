@@ -31,7 +31,7 @@ const Portfolio = () => {
 
   const emailAddress = "faizan.230101052@iiitbh.ac.in";
   const phoneNumber = "9792565855";
-  const resumeLink = "https://drive.google.com/file/d/1HdZsd8ebIDszYpPOYZlF4RUb4NV3YzSg/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/1IA8N__ysI4MXRFfdtfRQdVrVvU_FWo_v/view";
 
   // 1. Handle scroll for navbar blur effect (Optimized)
   useEffect(() => {
